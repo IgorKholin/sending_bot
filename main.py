@@ -1,4 +1,3 @@
 
 
 
-tg_key = '8095210333:AAH79RGQmYOvcKqs64EhejWB-XMnGB3y_Og'

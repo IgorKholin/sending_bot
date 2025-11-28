@@ -1,0 +1,20 @@
+# Ключи и чувствительные данные
+keys.py
+*.key
+*.pem
+*.env
+config.py
+
+# Папка с ключами (если есть)
+keys/
+secret/
+
+# IDE
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+env/

@@ -133,7 +133,9 @@ def process_mass_sending(call):
                 # Пропускаем уже отправленные
                 if pd.notna(row.get('Результат')) and 'Успешно' in str(row['Результат']):
                     continue
-
+                    # Переотправляем сообщения с ошибкой (очищаем результат)
+                if (pd.notna(row.get('Результат')) and any(error in str(row['Результат']) for error in ['❌ Ошибка', 'Ошибка', 'Не удалось'])):
+                        df.at[index, 'Результат'] = ''
                 name = str(row['Имя']) if pd.notna(row['Имя']) else ''
                 phone = row['Номер']
                 template_text = str(row['Текст']) if pd.notna(row['Текст']) else ''

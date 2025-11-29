@@ -1,10 +1,11 @@
 import requests
+from keys import InstanceWhatsup, ApiWhatsup
 
 def check_greenapi_status():
     """Проверка статуса Green-API аккаунта"""
     try:
-        idInstance = "1103397900"
-        apiTokenInstance = "546ae028174846fc977b87bc99bfcc2834bbe0c022ef4e2794"
+        idInstance = InstanceWhatsup
+        apiTokenInstance = ApiWhatsup
 
         # Проверяем состояние аккаунта
         state_url = f"https://api.green-api.com/waInstance{idInstance}/getStateInstance/{apiTokenInstance}"
